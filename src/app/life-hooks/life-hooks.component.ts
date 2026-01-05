@@ -6,13 +6,21 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   templateUrl: './life-hooks.component.html',
   styleUrl: './life-hooks.component.css'
 })
-export class LifeHooksComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, 
-AfterViewInit, AfterViewChecked, OnDestroy  {
+export class 
+LifeHooksComponent 
+implements OnChanges, 
+OnInit, DoCheck, 
+AfterContentInit, 
+AfterContentChecked, 
+AfterViewInit, 
+AfterViewChecked, 
+OnDestroy  {
 
   @Input() getaddress: string = "";
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges called:', changes);
+    console.log('ngOnChanges called:', 
+      changes);
   }
 
   ngOnInit() {
@@ -31,7 +39,8 @@ AfterViewInit, AfterViewChecked, OnDestroy  {
     console.log('ngAfterContentChecked called');
   }
 
-  @ViewChild('viewContent') content!: ElementRef;
+  @ViewChild('viewContent') 
+  content!: ElementRef;
 
   ngAfterViewInit() {
     console.log('ngAfterViewInit called', this.content.nativeElement.textContent);
