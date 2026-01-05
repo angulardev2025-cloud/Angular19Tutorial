@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { CounterComponent } from '../counter/counter.component';
 import { Router } from '@angular/router';
 import { DataService, IPost } from '../services/data.service';
-import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -14,7 +14,11 @@ import { Observable } from 'rxjs';
 export class FirstComponent implements OnInit {
   title = "First Component Load";
 
-  constructor(private router: Router, private dataService: DataService) {
+  constructor(
+    private router: Router, 
+    private dataService: DataService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.saveToStorage();
     this.greeting = this.dataService.getGreeting('Sunny');
   }
@@ -32,7 +36,9 @@ export class FirstComponent implements OnInit {
   }
 
   saveToStorage() {
-    localStorage.setItem('myData', 'Some Data is Important');
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('myData', 'Some Data is Important');
+    }
   }
 
   updateData() {
@@ -56,10 +62,4 @@ export class FirstComponent implements OnInit {
     this.dataService.addUser(newUser);
     this.users = this.dataService.getUsers(); // Refreshing the list
   }
-
- 
-
-  
-  
-  
 }
