@@ -7,7 +7,7 @@ import { IUser } from './interfaces/user';
   providedIn: 'root',
 })
 export class UserService {
-  private userName = new BehaviorSubject<string>('Sunny S');
+  private userName = new BehaviorSubject<string>('Sonu S');
   currentUserName = this.userName.asObservable();
 
   changeUserName(name: string) {

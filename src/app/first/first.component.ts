@@ -20,7 +20,7 @@ export class FirstComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.saveToStorage();
-    this.greeting = this.dataService.getGreeting('Sunny');
+    this.greeting = this.dataService.getGreeting('Sonu');
   }
 
   goToDetails(id: number) {
@@ -28,7 +28,7 @@ export class FirstComponent implements OnInit {
   }
 
   goToDetails2() {
-    this.router.navigate(['/details'], { queryParams: { id: 101, name: 'Sunny' } });
+    this.router.navigate(['/details'], { queryParams: { id: 101, name: 'Sonu' } });
   }
 
   goToDetails3() {

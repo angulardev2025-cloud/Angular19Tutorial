@@ -54,7 +54,7 @@ export class SignalsComponent {
     this.items.set(updatedItems);
   }
 
-  user = signal<User>({ name: 'Sunny', age: 30 });
+  user = signal<User>({ name: 'Sonu', age: 30 });
   updateAge() {
     this.user.set({ ...this.user(), age: this.user().age + 1, name: 'Sood' });
   }

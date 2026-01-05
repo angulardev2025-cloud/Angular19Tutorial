@@ -20,8 +20,8 @@ export class RegisterComponent implements OnInit {
 
   // Defining FormGroup
   userForm = new FormGroup({
-    name: new FormControl('sunny sk', [Validators.required, Validators.minLength(3)]),
-    email: new FormControl('ss@sunny.com', [Validators.required, Validators.email])
+    name: new FormControl('Sonu sk', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('ss@Sonu.com', [Validators.required, Validators.email])
   });
 
   onSubmit() {
@@ -29,11 +29,11 @@ export class RegisterComponent implements OnInit {
     console.log(this.userForm.value);
 
     /*this.userForm.setValue({
-      name: "sunny s",
-      email: "sunnys@ss.com"
+      name: "Sonu s",
+      email: "Sonus@ss.com"
     });*/
 
-    /*this.userForm.patchValue({name: "sunny s"});*/
+    /*this.userForm.patchValue({name: "Sonu s"});*/
 
     this.userForm.reset();
     

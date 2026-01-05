@@ -21,16 +21,16 @@ type Employee = {
 })
 export class DataTypesComponent {
 
-  name: string = "Sunny";
+  name: string = "Sonu";
 
   age: number = 30;
   height: number = 5.9;
   isActive: boolean = false;
 
   numbers: number[] = [1, 2, 3, 4];
-  names: Array<string> = ["John", "Doe", "Sunny"];
+  names: Array<string> = ["John", "Doe", "Sonu"];
 
-  person: [string, number, boolean] = ["Sunny", 30, true];
+  person: [string, number, boolean] = ["Sonu", 30, true];
 
   setColor = Color;
 
@@ -58,14 +58,14 @@ export class DataTypesComponent {
   }
 
   user: { name: string; age: number } = {
-    name: "Sunny",
+    name: "Sonu",
     age: 30,
   };
 
-  Uid: number | string = "sunny";
+  Uid: number | string = "Sonu";
 
   emp: Employee = {
-    name: "Sunny",
+    name: "Sonu",
     age: 30,
     isActive: true,
   };

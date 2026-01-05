@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -12,17 +13,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
   time: string;
   private intervalId: any;
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.time = new Date().toLocaleTimeString();
   }
 
   ngOnInit(): void {
-    this.intervalId = setInterval(() => {
-      this.time = new Date().toLocaleTimeString();
-    }, 1000);
+    if (isPlatformBrowser(this.platformId)) {
+      this.intervalId = setInterval(() => {
+        this.time = new Date().toLocaleTimeString();
+      }, 1000);
+    }
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 }

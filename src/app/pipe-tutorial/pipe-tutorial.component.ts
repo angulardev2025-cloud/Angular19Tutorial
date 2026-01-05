@@ -15,10 +15,10 @@ export class PipeTutorialComponent {
   currentDate = new Date();
   amount = 12345.6789;
   message = 'Angular is awesome!';
-  person = { name: 'Sunny', age: 35, location: 'Chandigarh' };
+  person = { name: 'Sonu', age: 35, location: 'Chandigarh' };
 
   message2 = 'This is a long message that needs to be truncated!';
   searchText = '';
-  names = ['Sunny', 'Shilpa', 'Rahul', 'Tomia', 'Pregya'];
+  names = ['Sonu', 'Shilpa', 'Rahul', 'Tomia', 'Pregya'];
 
 }

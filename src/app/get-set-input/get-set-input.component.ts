@@ -23,7 +23,7 @@ export class GetSetInputComponent {
     this.inputValue = input.value;
   }
 
-  name: string = 'sunny sood';
+  name: string = 'Sonu sood';
   setName() {
     this.name = 'John Doe';
   }
