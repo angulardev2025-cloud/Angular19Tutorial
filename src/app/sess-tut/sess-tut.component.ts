@@ -13,16 +13,16 @@ export class SessTutComponent implements OnInit {
 
   ngOnInit(): void {
 
-    localStorage.setItem("token","ERTERER");
-    const tokenU = localStorage.getItem("token");
-    //console.log(tokenU);
-    //alert(tokenU);
-    localStorage.removeItem("token");
+    // localStorage.setItem("token","ERTERER");
+    // const tokenU = localStorage.getItem("token");
+    // //console.log(tokenU);
+    // //alert(tokenU);
+    // localStorage.removeItem("token");
 
-    sessionStorage.setItem("address","New Delhi");
-    //console.log(  sessionStorage.getItem("address") );
-    sessionStorage.removeItem("address");
-    //console.log(  sessionStorage.getItem("address") );
+    // sessionStorage.setItem("address","New Delhi");
+    // //console.log(  sessionStorage.getItem("address") );
+    // sessionStorage.removeItem("address");
+    // //console.log(  sessionStorage.getItem("address") );
 
 
     this.cookieService.set("State","Chandigarh",1);

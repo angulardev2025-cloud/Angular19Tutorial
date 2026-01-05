@@ -13,7 +13,6 @@ export class AuthGuardService implements CanActivate {
     if (this.authService.isAuthenticated()) {
       return true;
     } else {
-      alert('Access Denied! Please log in first.');
       this.router.navigate(['/login']);
       return false;
     }

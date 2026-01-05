@@ -29,7 +29,6 @@ export class LoginComponent {
 
   onSubmit(form: any) {
     console.log('Form Submitted!', form.value);
-    alert('Registration Successful!');
 
     this.authService.login();
     this.router.navigate(['/userLists']);
